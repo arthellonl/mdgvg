@@ -1,0 +1,37 @@
+state: enabled
+email: a@a.com
+fullname: Manon
+language: nl
+content_editor: codemirror
+twofa_enabled: false
+twofa_secret: SFGIYGZKZ6ATRRLVVN2TPXHBPVKPFAJY
+avatar: {  }
+hashed_password: $2y$10$wKQxJuf/.dLVZdrqfN8Jn.tGRssTlewp9YNK7dgFNGD7bVJXP6yEO
+access:
+  site:
+    login: true
+  admin:
+    login: true
+    super: false
+    cache: true
+    configuration:
+      system: false
+      site: true
+      media: true
+      security: true
+      info: true
+      pages: true
+      users: true
+    pages: true
+    maintenance: false
+    statistics: true
+    plugins: false
+    themes: false
+    tools: false
+    users:
+      create: true
+      read: false
+      update: false
+      delete: false
+      list: true
+    flex-objects: false
