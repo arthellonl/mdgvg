@@ -1,115 +1,103 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1671532618,
-    'checksum' => 'f435ef2c2888eeb51c32a4e26dce3c4a',
+    'timestamp' => 1671561060,
+    'checksum' => '8cb2498a332c9fc7837b3b6148460d9d',
     'files' => [
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
-                'modified' => 1671362919
+                'modified' => 1671559477
             ],
             'plugins/tinymce-editor' => [
                 'file' => 'user/config/plugins/tinymce-editor.yaml',
-                'modified' => 1614668458
+                'modified' => 1671559477
             ],
             'security' => [
                 'file' => 'user/config/security.yaml',
-                'modified' => 1671361140
+                'modified' => 1671560211
             ],
             'site' => [
                 'file' => 'user/config/site.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ],
             'system' => [
                 'file' => 'user/config/system.yaml',
-                'modified' => 1671532610
+                'modified' => 1671559477
             ],
             'versions' => [
                 'file' => 'user/config/versions.yaml',
-                'modified' => 1671361140
+                'modified' => 1671560211
             ]
         ],
         'system/config' => [
             'backups' => [
                 'file' => 'system/config/backups.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ],
             'media' => [
                 'file' => 'system/config/media.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ],
             'mime' => [
                 'file' => 'system/config/mime.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ],
             'permissions' => [
                 'file' => 'system/config/permissions.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ],
             'security' => [
                 'file' => 'system/config/security.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ],
             'site' => [
                 'file' => 'system/config/site.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ],
             'system' => [
                 'file' => 'system/config/system.yaml',
-                'modified' => 1665003982
+                'modified' => 1671559477
             ]
         ],
         'user/plugins' => [
-            'plugins/admin' => [
-                'file' => 'user/plugins/admin/admin.yaml',
-                'modified' => 1665214520
-            ],
-            'plugins/devtools' => [
-                'file' => 'user/plugins/devtools/devtools.yaml',
-                'modified' => 1635244286
-            ],
-            'plugins/email' => [
-                'file' => 'user/plugins/email/email.yaml',
-                'modified' => 1648455926
-            ],
-            'plugins/error' => [
-                'file' => 'user/plugins/error/error.yaml',
-                'modified' => 1630997956
+            'plugins/form' => [
+                'file' => 'user/plugins/form/form.yaml',
+                'modified' => 1671560212
             ],
             'plugins/flex-objects' => [
                 'file' => 'user/plugins/flex-objects/flex-objects.yaml',
-                'modified' => 1669976016
+                'modified' => 1671560212
             ],
-            'plugins/form' => [
-                'file' => 'user/plugins/form/form.yaml',
-                'modified' => 1669730014
+            'plugins/admin' => [
+                'file' => 'user/plugins/admin/admin.yaml',
+                'modified' => 1671560211
+            ],
+            'plugins/devtools' => [
+                'file' => 'user/plugins/devtools/devtools.yaml',
+                'modified' => 1671560212
+            ],
+            'plugins/error' => [
+                'file' => 'user/plugins/error/error.yaml',
+                'modified' => 1671560212
             ],
             'plugins/login' => [
                 'file' => 'user/plugins/login/login.yaml',
-                'modified' => 1655193712
+                'modified' => 1671560212
             ],
-            'plugins/markdown-notices' => [
-                'file' => 'user/plugins/markdown-notices/markdown-notices.yaml',
-                'modified' => 1671361155
-            ],
-            'plugins/problems' => [
-                'file' => 'user/plugins/problems/problems.yaml',
-                'modified' => 1671361153
+            'plugins/email' => [
+                'file' => 'user/plugins/email/email.yaml',
+                'modified' => 1671560212
             ],
             'plugins/tinymce-editor' => [
                 'file' => 'user/plugins/tinymce-editor/tinymce-editor.yaml',
-                'modified' => 1614668458
+                'modified' => 1671560212
             ]
         ],
         'user/themes' => [
             'themes/mdgvg-theme' => [
                 'file' => 'user/themes/mdgvg-theme/mdgvg-theme.yaml',
-                'modified' => 1671532554
-            ],
-            'themes/quark' => [
-                'file' => 'user/themes/quark/quark.yaml',
-                'modified' => 1671361157
+                'modified' => 1671560213
             ]
         ]
     ],
@@ -120,24 +108,79 @@ return [
                 'dropdown' => [
                     'enabled' => true
                 ]
-            ],
-            'quark' => [
-                'enabled' => true,
-                'production-mode' => true,
-                'grid-size' => 'grid-lg',
-                'header-fixed' => true,
-                'header-animated' => true,
-                'header-dark' => false,
-                'header-transparent' => false,
-                'sticky-footer' => true,
-                'blog-page' => '/blog',
-                'spectre' => [
-                    'exp' => false,
-                    'icons' => false
-                ]
             ]
         ],
         'plugins' => [
+            'form' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'inline_css' => true,
+                'refresh_prevention' => false,
+                'client_side_validation' => true,
+                'inline_errors' => false,
+                'files' => [
+                    'multiple' => false,
+                    'limit' => 10,
+                    'destination' => 'self@',
+                    'avoid_overwriting' => false,
+                    'random_name' => false,
+                    'filesize' => 0,
+                    'accept' => [
+                        0 => 'image/*'
+                    ]
+                ],
+                'recaptcha' => [
+                    'version' => '2-checkbox',
+                    'theme' => 'light',
+                    'site_key' => NULL,
+                    'secret_key' => NULL
+                ],
+                'turnstile' => [
+                    'theme' => 'light',
+                    'site_key' => NULL,
+                    'secret_key' => NULL
+                ],
+                'basic_captcha' => [
+                    'type' => 'characters',
+                    'chars' => [
+                        'length' => 6,
+                        'font' => 'zxx-noise.ttf',
+                        'bg' => '#cccccc',
+                        'text' => '#333333',
+                        'size' => 24,
+                        'start_x' => 5,
+                        'start_y' => 30,
+                        'box_width' => 135,
+                        'box_height' => 40
+                    ],
+                    'math' => [
+                        'min' => 1,
+                        'max' => 12,
+                        'operators' => [
+                            0 => '+',
+                            1 => '-',
+                            2 => '*'
+                        ]
+                    ]
+                ]
+            ],
+            'flex-objects' => [
+                'enabled' => true,
+                'built_in_css' => true,
+                'extra_admin_twig_path' => 'theme://admin/templates',
+                'admin_list' => [
+                    'per_page' => 15,
+                    'order' => [
+                        'by' => 'updated_timestamp',
+                        'dir' => 'desc'
+                    ]
+                ],
+                'directories' => [
+                    0 => 'blueprints://flex-objects/pages.yaml',
+                    1 => 'blueprints://flex-objects/user-accounts.yaml',
+                    2 => 'blueprints://flex-objects/user-groups.yaml'
+                ]
+            ],
             'admin' => [
                 'enabled' => true,
                 'route' => '/admin',
@@ -243,109 +286,10 @@ return [
                 'enabled' => true,
                 'collision_check' => true
             ],
-            'email' => [
-                'enabled' => true,
-                'from' => NULL,
-                'from_name' => NULL,
-                'to' => NULL,
-                'to_name' => NULL,
-                'queue' => [
-                    'enabled' => false,
-                    'flush_frequency' => '* * * * *',
-                    'flush_msg_limit' => 10,
-                    'flush_time_limit' => 100
-                ],
-                'mailer' => [
-                    'engine' => 'sendmail',
-                    'smtp' => [
-                        'server' => 'localhost',
-                        'port' => 25,
-                        'encryption' => 'none',
-                        'user' => '',
-                        'password' => '',
-                        'auth_mode' => ''
-                    ],
-                    'sendmail' => [
-                        'bin' => '/usr/sbin/sendmail -bs'
-                    ]
-                ],
-                'content_type' => 'text/html',
-                'debug' => false
-            ],
             'error' => [
                 'enabled' => true,
                 'routes' => [
                     404 => '/error'
-                ]
-            ],
-            'flex-objects' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'extra_admin_twig_path' => 'theme://admin/templates',
-                'admin_list' => [
-                    'per_page' => 15,
-                    'order' => [
-                        'by' => 'updated_timestamp',
-                        'dir' => 'desc'
-                    ]
-                ],
-                'directories' => [
-                    0 => 'blueprints://flex-objects/pages.yaml',
-                    1 => 'blueprints://flex-objects/user-accounts.yaml',
-                    2 => 'blueprints://flex-objects/user-groups.yaml'
-                ]
-            ],
-            'form' => [
-                'enabled' => true,
-                'built_in_css' => true,
-                'inline_css' => true,
-                'refresh_prevention' => false,
-                'client_side_validation' => true,
-                'inline_errors' => false,
-                'files' => [
-                    'multiple' => false,
-                    'limit' => 10,
-                    'destination' => 'self@',
-                    'avoid_overwriting' => false,
-                    'random_name' => false,
-                    'filesize' => 0,
-                    'accept' => [
-                        0 => 'image/*'
-                    ]
-                ],
-                'recaptcha' => [
-                    'version' => '2-checkbox',
-                    'theme' => 'light',
-                    'site_key' => NULL,
-                    'secret_key' => NULL
-                ],
-                'turnstile' => [
-                    'theme' => 'light',
-                    'site_key' => NULL,
-                    'secret_key' => NULL
-                ],
-                'basic_captcha' => [
-                    'type' => 'characters',
-                    'chars' => [
-                        'length' => 6,
-                        'font' => 'zxx-noise.ttf',
-                        'bg' => '#cccccc',
-                        'text' => '#333333',
-                        'size' => 24,
-                        'start_x' => 5,
-                        'start_y' => 30,
-                        'box_width' => 135,
-                        'box_height' => 40
-                    ],
-                    'math' => [
-                        'min' => 1,
-                        'max' => 12,
-                        'operators' => [
-                            0 => '+',
-                            1 => '-',
-                            2 => '*'
-                        ]
-                    ]
                 ]
             ],
             'login' => [
@@ -410,20 +354,34 @@ return [
                     ]
                 ]
             ],
-            'markdown-notices' => [
+            'email' => [
                 'enabled' => true,
-                'built_in_css' => true,
-                'base_classes' => 'notices',
-                'level_classes' => [
-                    0 => 'yellow',
-                    1 => 'red',
-                    2 => 'blue',
-                    3 => 'green'
-                ]
-            ],
-            'problems' => [
-                'enabled' => true,
-                'built_in_css' => true
+                'from' => NULL,
+                'from_name' => NULL,
+                'to' => NULL,
+                'to_name' => NULL,
+                'queue' => [
+                    'enabled' => false,
+                    'flush_frequency' => '* * * * *',
+                    'flush_msg_limit' => 10,
+                    'flush_time_limit' => 100
+                ],
+                'mailer' => [
+                    'engine' => 'sendmail',
+                    'smtp' => [
+                        'server' => 'localhost',
+                        'port' => 25,
+                        'encryption' => 'none',
+                        'user' => '',
+                        'password' => '',
+                        'auth_mode' => ''
+                    ],
+                    'sendmail' => [
+                        'bin' => '/usr/sbin/sendmail -bs'
+                    ]
+                ],
+                'content_type' => 'text/html',
+                'debug' => false
             ],
             'tinymce-editor' => [
                 'enabled' => true,
