@@ -1,4 +1,15 @@
-/cache/
-user/themes/quark/
-user/plugins/problems/
-user/plugins/markdown-notices/
+# Grav Specific
+.sass-cache
+composer.lock
+cache/*
+assets/*
+logs/*
+images/*
+user/data/*
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
