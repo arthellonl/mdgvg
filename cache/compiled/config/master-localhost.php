@@ -1,9 +1,19 @@
 <?php
 return [
     '@class' => 'Grav\\Common\\Config\\CompiledConfig',
-    'timestamp' => 1671561060,
-    'checksum' => '8cb2498a332c9fc7837b3b6148460d9d',
+    'timestamp' => 1671611589,
+    'checksum' => '511077d9e141ebb5ed66153a3fb50dc7',
     'files' => [
+        'user/localhost/config' => [
+            'security' => [
+                'file' => 'user/localhost/config/security.yaml',
+                'modified' => 1671611589
+            ],
+            'system' => [
+                'file' => 'user/localhost/config/system.yaml',
+                'modified' => 1671610758
+            ]
+        ],
         'user/config' => [
             'media' => [
                 'file' => 'user/config/media.yaml',
@@ -3884,7 +3894,7 @@ node_modules'
                 4 => 'exe'
             ],
             'sanitize_svg' => true,
-            'salt' => 'gKjParZfCq0y8J'
+            'salt' => 'wptJdDBbVcTOsq'
         ],
         'site' => [
             'title' => 'Grav',
@@ -4110,7 +4120,7 @@ node_modules'
                 ]
             ],
             'debugger' => [
-                'enabled' => false,
+                'enabled' => true,
                 'provider' => 'clockwork',
                 'censored' => false,
                 'shutdown' => [
