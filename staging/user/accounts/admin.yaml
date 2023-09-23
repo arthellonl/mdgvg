@@ -1,0 +1,16 @@
+state: enabled
+email: mdgvg@arthello.com
+fullname: Arthello
+title: Administrator
+hashed_password: $2y$10$koHtIdx7cxiyf2uE4xgAe.LrzMZfyFBAJWoJNff6C6z3iIgZzKlnS
+language: en
+content_editor: default
+twofa_enabled: false
+twofa_secret: OAI4UIS5B6LVUFLWY3J5FWF4P2SOXKB4
+avatar: {  }
+access:
+  site:
+    login: true
+  admin:
+    login: true
+    super: true

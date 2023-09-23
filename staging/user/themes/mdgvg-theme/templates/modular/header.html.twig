@@ -1,0 +1,24 @@
+<section id="header" style="background-image: url('{{ url('theme://assets/img/' ~ page.header.coverphoto|first.name) }}')">
+    <!-- <div class="nav-wrapper"> -->
+        <a href="{{ home_url }}" id="logo"></a>
+        <nav>
+            <input type="checkbox" id="toggle-nav">
+            <label for="toggle-nav" id="nav-icon4" class="toggle-nav-button"><span></span><span></span><span></span></label>
+            <ul>
+                <li><a href="#overmij">Over mij</a></li>
+                <li><a href="#demos">Demo's</a></li>
+                <li><a href="#prijzen">Prijzen</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    <!-- </div> -->
+    <h2>
+        {{ page.header.herotext|raw }}
+        <!--Fris.<br>
+        Helder.<br>
+        Positief.<br>
+        Genieten.<br>
+        Toegankelijk.-->
+    </h2>
+</section>

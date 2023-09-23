@@ -1,0 +1,38 @@
+title: Header
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            #header.pagetitle:
+              #type: spacer
+              #title: Header
+            header.media_order:
+              type: ignore
+            header.title:
+              type: ignore
+            content:
+              type: ignore
+            header.herotext:
+              type: editor
+              #rows: 5
+              label: Hero tekst [info - gebruik < b r / > html tags zonder spaties voor een nieuwe regel]
+            header.coverphoto:
+              type: file
+              label: Header achtergrondafbeelding
+              multiple: false
+              destination: 'theme://assets/img'
+              random_name: false
+              avoid_overwriting: false
+              limit: 1
+              accept:
+                - image/*
+              validate:
+                required: false
+            
+            

@@ -1,0 +1,57 @@
+title: Footer
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            #header.pagetitle:
+              #type: spacer
+              #title: Footer
+            header.media_order:
+              type: ignore
+            header.title:
+              type: ignore
+            content:
+              label: Tagline
+              #type: ignore
+            #header.tagline:
+              #type: text
+              #label: Tagline
+            header.socialsname:
+              type: text
+              label: Socials tekst naam
+            header.socialstext:
+              type: text
+              label: Socials tekst
+            header.features:
+              name: socialicons
+              type: list
+              #collapsed: true
+              label: Social icons
+              fields:
+                .url:
+                  type: text
+                  label: URL (inclusief https://)
+                  validate:
+                    required: false
+                .text:
+                  type: text
+                  label: Naam
+                .icon:
+                  type: file
+                  label: Icon
+                  multiple: false
+                  destination: 'theme://assets/img'
+                  random_name: false
+                  avoid_overwriting: false
+                  limit: 1
+                  accept:
+                    - image/*
+                  validate:
+                    required: false
+        

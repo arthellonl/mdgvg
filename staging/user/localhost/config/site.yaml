@@ -1,0 +1,20 @@
+title: 'Manon de Groot-van Gelder — Stemactrice, voice-over en theatermaker'
+default_lang: nl
+author:
+  name: Manon
+  email: manondegrootvangelder@gmail.com
+taxonomies:
+  - category
+  - tag
+metadata:
+  description: 'Manon de Groot-van Gelder — Stemactrice, voice-over en theatermaker'
+  keywords: 'stemactrice, voiceover, theater'
+summary:
+  enabled: true
+  format: short
+  size: 300
+  delimiter: '==='
+redirects: null
+routes: null
+blog:
+  route: /blog

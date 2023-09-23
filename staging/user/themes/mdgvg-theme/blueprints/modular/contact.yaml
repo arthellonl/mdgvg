@@ -1,0 +1,24 @@
+title: Contact
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            header.pagetitle:
+              type: spacer
+              title: Contact
+            header.media_order:
+              type: ignore
+            header.title:
+              type: ignore
+            content:
+              type: ignore
+            header.subheading:
+              type: text
+              label: Subheading
+        

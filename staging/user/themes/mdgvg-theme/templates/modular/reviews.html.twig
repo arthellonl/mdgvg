@@ -1,0 +1,61 @@
+<section id="reviews">
+    <h3>Reviews</h3>
+    <h4>Lieve mensen over mij</h4>
+
+    {% for feature in page.header.features %}
+    <div class="row">
+        <div class="col3 col12-xs">
+            <figure class="avatar" style="background-image:url({{ url("theme://assets/img/" ~ feature.picture|first.name) }});" />
+                <span class="avatar-title">{{ feature.firstname }}</span>
+            </figure>
+        </div>
+        <div class="col6 col9-sm col12-xs">
+            <h5>{{ feature.firstname }} {{ feature.lastname }} <em>{{ feature.jobtitle }}</em></h5>
+            <p>
+                {{ feature.text|raw }}
+            </p>
+        </div>
+    </div>
+    {% endfor %}
+
+    <!--<div class="row">
+        <div class="col3 col12-xs">
+            <figure class="avatar" style="background-image:url({{ url("theme://assets/img/foto-Renata.jpeg")|e }});" />
+
+                <span class="avatar-title">Renata</span>
+            </figure>
+        </div>
+        <div class="col6 col9-sm col12-xs">
+            <h5>Renata Wolak <em>&middot; Customer Experience Manager Allianz Benelux</em></h5>
+            <p>
+                "Ik heb met Manon mogen werken aan de verfilming van een aantal klantverhalen. Niet zomaar verhalen, maar herkenbare verhalen die gewenst gedrag weergeven en medewerkers bewegen tot verandering en klantgerichtheid. De creatieve geest van Manon, haar humor en haar prachtige, heldere stem (Manon heeft de voice-overs voor de films ingesproken) vallen meteen op. De kwaliteit van de films en de kracht van de voice-overs hebben bijgedragen aan het succes dat we samen hebben neergezet. 'First time right', een belangrijke principe voor Allianz. Maar hoe breng je dit principe tot leven in een groot bedrijf als het onze? Door storytelling samen met Manon! Manon bedankt!"
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col3 col12-xs">
+            <figure class="avatar" style="background-image:url({{ url("theme://assets/img/pim-2.png")|e }});" />
+                <span class="avatar-title">Pim</span>
+            </figure>
+        </div>
+        <div class="col6 col9-sm col12-xs">
+            <h5>Pim Veth <em>&middot; Voice-over, presentator, (stem)acteur</em></h5>
+            <p>
+                "Ik werk erg graag met Manon. Haar stem is prettig, vertrouwd en warm. Ze levert snel en professioneel werk en denkt erg goed mee. Ik ben zelf werkzaam als voice-over en weet hoe belangrijk het is mee te denken en snel te kunnen schakelen. Elk merk, elke klant verdient een eigen geluid en Manon is in staat elke opdrachtgever een eigen geluid te geven. Haar achtergrond als regisseur en actrice werkt ongelooflijk in haar voordeel."
+            </p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col3 col12-xs">
+            <figure class="avatar" style="background-image:url({{ url("theme://assets/img/ELLEN-Persoon.jpg")|e }});" />
+                <span class="avatar-title">Ellen</span>
+            </figure>
+        </div>
+        <div class="col6 col9-sm col12-xs">
+            <h5>Ellen Persoon <em>&middot; Actrice bij Studio de Bakkerij</em></h5>
+            <p>
+                "In 2019 werkte ik als actrice samen met Manon, een mooi intensief traject. Ik vind haar als regisseur enorm inspirerend. Ik heb haar ervaren als een vakvrouw die het ambacht verstaat en die naast haar heldere maar nooit starre visie een heel prettige en veilige omgeving creëert waarin ik me als acteur kon ontwikkelen. Haar ‘lullen en poetsen’ mentaliteit maakte het werken met haar een feest! Ze geeft ruimte aan vorm èn inhoud. Manon heeft het vermogen echt te luisteren; ook in haar acteurs zoekt ze de verhalen en dat voel je. Er zit oprechtheid in haar vragen en in haar aanwezigheid als regisseur en mens."
+            </p>
+        </div>
+    </div>-->
+</section>

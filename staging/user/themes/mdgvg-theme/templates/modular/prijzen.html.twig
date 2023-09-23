@@ -1,0 +1,37 @@
+<section id="prijzen">
+    <div class="pricelist-content">
+        <h3>Prijzen</h3>
+        <h4>{{ page.header.subheading }}</h4>
+
+        {% for feature in page.header.features %}
+        {% if (feature.prices|length > 2) or (feature.prices|length < 3 and loop.index is even) %}
+        <div class="row">
+        {% endif %}
+            <div class="{% if feature.prices|length > 2 %}col12{% else %}col6 col12-sm col12-xs{% endif %}">
+                <div class="title">
+                    <img src="{{ url("theme://assets/img/" ~ feature.icon|first.name) }}" />
+                    <h5>{{ feature.title }}</h5>
+                </div>
+                <div class="row">
+                    {% for price in feature.prices %}
+                    <div class="{% if (feature.prices|length > 2)%}col2{% else %}col4{% endif %} col6-sm col6-xs price">
+                        <span>{{ price.price }}</span>
+                        <em>{{ price.range }}</em>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        {% if (feature.prices|length > 2) or (feature.prices|length < 3 and loop.index is odd) %}
+        </div>
+        {% endif %}
+        <hr />
+        {% endfor %}
+
+        <p>
+            {{ page.header.info }} <a href="#contact">{{ page.header.buttontext }}</a>
+        </p>
+        <p class="alt">
+            {{ page.header.footnote }}
+        </p>
+    </div>
+</section>

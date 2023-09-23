@@ -1,0 +1,30 @@
+enabled: true
+from: info@manondegrootvangelder.nl
+from_name: Manon
+to: info@manondegrootvangelder.nl
+to_name: Manon
+queue:
+  enabled: false
+  flush_frequency: '* * * * *'
+  flush_msg_limit: 10
+  flush_time_limit: 100
+mailer:
+  engine: smtp
+  smtp:
+    server: mail.zxcs.nl
+    port: 465
+    encryption: ssl
+    user: info@manondegrootvangelder.nl
+    password: '284RAiPpVEza#uyS'
+    auth_mode: plain
+  sendmail:
+    bin: /usr/sbin/sendmail
+content_type: text/html
+debug: false
+charset: null
+cc: null
+cc_name: null
+bcc: null
+reply_to: null
+reply_to_name: null
+body: null

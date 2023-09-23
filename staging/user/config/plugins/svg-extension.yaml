@@ -1,0 +1,4 @@
+enabled: true
+path: 'theme://assets/img/'
+defaultClass: 'icon'
+removeScriptTags: true

@@ -1,0 +1,42 @@
+state: enabled
+email: manonvangelder@gmail.com
+fullname: Manon
+language: nl
+content_editor: codemirror
+twofa_enabled: false
+twofa_secret: SFGIYGZKZ6ATRRLVVN2TPXHBPVKPFAJY
+avatar: {  }
+hashed_password: $2y$10$CdTTJ1vOq/PO5TnNiDEZduhlPoubc3TeE227B.lv4sXNQfZz3Uhui
+access:
+  site:
+    login: true
+  admin:
+    login: true
+    super: false
+    cache: true
+    configuration:
+      system: false
+      site: true
+      media: false
+      security: false
+      info: false
+      pages: true
+      users: true
+    pages:
+      create: false
+      read: true
+      update: true
+      delete: false
+      list: true
+    maintenance: true
+    statistics: true
+    plugins: false
+    themes: false
+    tools: true
+    users:
+      create: true
+      read: false
+      update: false
+      delete: false
+      list: true
+    flex-objects: false

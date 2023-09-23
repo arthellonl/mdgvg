@@ -1,0 +1,4 @@
+status:
+  cache-purge: disabled
+  cache-clear: disabled
+  mdgvg-auto-backup: enabled

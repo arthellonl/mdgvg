@@ -1,0 +1,67 @@
+title: Demos
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            #header.pagetitle:
+              #type: spacer
+              #title: Demo's
+            header.media_order:
+              type: ignore
+            header.title:
+              type: ignore
+            content:
+              type: ignore
+            header.subheading:
+              type: text
+              label: Subheading
+              style: vertical
+            header.features:
+              name: demos
+              type: list
+              style: vertical
+              label: Demo items [info - Per rij maximaal 3 demo's. Voeg meer rijen toe met de (+) button]
+              controls: both
+              fields:
+                .mediatype:
+                  type: select
+                  size: small
+                  #classes: fancy
+                  label: 'Demo type'
+                  #help: 'Pages in a list will render using this order unless it is overridden'
+                  options:
+                      audio: 'Audio'
+                      video: 'Video'
+                .items:
+                  name: items
+                  type: list
+                  max: 3
+                  label: Items
+                  fields:
+                    .title:
+                      type: text
+                      label: Titel
+                    .description:
+                      type: textarea
+                      label: Beschrijving
+                    .media:
+                      type: file
+                      label: Media
+                      help: Bestand vervangen? verwijder eerst het oude bestand via het prullenbak icoon naast het bestand en kies daarna pas het nieuwe bestand
+                      multiple: false
+                      destination: 'theme://assets/media'
+                      random_name: false
+                      avoid_overwriting: false
+                      limit: 1
+                      accept:
+                        - audio/*
+                        - video/*
+                      validate:
+                        required: false
+                    

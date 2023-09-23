@@ -1,0 +1,52 @@
+title: Overmij
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            #header.pagetitle:
+              #type: spacer
+              #title: Over mij
+            header.media_order:
+              type: ignore
+            header.title:
+              type: ignore
+            content:
+              #label: Over mij
+              #type: ignore
+              label: Tekst [info - gebruik twee < b r / > html tags zonder spaties voor een nieuwe paragraaf [of] zet de inhoud van elke paragraaf tussen < p > en < / p > html tags zonder spaties. Voor invoegen van hyperlinks, gebruik de markdown notatie]
+            #header.content:
+              #type: editor
+              #label: Tekst [info - gebruik twee < b r / > html tags zonder spaties voor een nieuwe paragraaf [of] zet de inhoud van elke paragraaf tussen < p > en < / p > html tags zonder spaties. Voor invoegen van hyperlinks, gebruik de markdown notatie]
+            header.heading:
+              type: text
+              label: Heading
+            header.name:
+              type: text
+              label: Naam in heading
+            header.subheading:
+              type: text
+              label: Subheading
+            header.tagline:
+              type: editor
+              #style: vertical
+              #rows: 1
+              label: Tagline [info - maak woorden italic (tussen twee underscores) om deze witgekleurd te tonen op de website]
+            header.avatar:
+              type: file
+              label: Foto
+              multiple: false
+              destination: 'theme://assets/img'
+              random_name: false
+              avoid_overwriting: false
+              limit: 1
+              accept:
+                - image/*
+              validate:
+                required: false
+            

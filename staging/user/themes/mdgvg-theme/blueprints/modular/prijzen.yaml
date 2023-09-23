@@ -1,0 +1,67 @@
+title: Prijzen
+'@extends': default
+
+form:
+  fields:
+    tabs:
+      fields:
+        content:
+          type: tab
+          title: Content
+          fields:
+            #header.pagetitle:
+              #type: spacer
+              #title: Prijzen
+            header.media_order:
+              type: ignore
+            header.title:
+              type: ignore
+            content:
+              type: ignore
+            header.subheading:
+              type: text
+              label: Subheading
+              style: vertical
+            header.features:
+              name: prijzen
+              type: list
+              style: vertical
+              label: Prijs items
+              fields:
+                .icon:
+                  type: file
+                  label: Icon
+                  multiple: false
+                  destination: 'theme://assets/img'
+                  random_name: false
+                  avoid_overwriting: false
+                  accept:
+                    - image/*
+                  validate:
+                    required: false
+                .title:
+                  type: text
+                  label: Titel
+                .prices:
+                  name: prices
+                  type: list
+                  label: Prijzen
+                  fields:
+                    .price:
+                      type: text
+                      label: Prijs
+                    .range:
+                      type: text
+                      label: Omvang
+            header.info:
+              name: info
+              type: text
+              label: Info
+            header.buttontext:
+              type: text
+              label: Button tekst
+            header.footnote:
+              type: text
+              label: Voetnoot
+                
+                    
