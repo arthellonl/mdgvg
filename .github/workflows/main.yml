@@ -1,4 +1,4 @@
-name: SSH deployment
+name: SSH deployment from repo to staging site
 on: push                 
 jobs:
   web-deploy:
@@ -16,7 +16,7 @@ jobs:
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.FTP_USERNAME }}
           REMOTE_PORT: '7685'
-          TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: "/vendor/, /storage/, /web/, /public_html/, /modules/, /config/, .htaccess, .env, .env.example"
+          TARGET: ${{ secrets.REMOTE_TARGET }}/stagingtest
+          EXCLUDE: "/vendor/, /storage/, /web/, /public_html/, /modules/, /config/, .htaccess, .env, .env.example, .github"
 
 
