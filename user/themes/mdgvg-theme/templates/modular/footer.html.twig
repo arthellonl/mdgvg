@@ -3,17 +3,11 @@
         <div class="social-links">
             <em>{{ page.header.socialsname}}</em> <span>{{ page.header.socialstext}}</span> 
             <div class="social-buttons">
-                <!--<a href="#" class="twitter">Twitter</a> 
-                <a href="#" class="facebook">Facebook</a> 
-                <a href="#" class="linkedin">LinkedIn</a>-->
                 {% for feature in page.header.features %}
                 <a href="{{ feature.url }}" class="{{ feature.text|lower }}" style="background-image:url({{ url("theme://assets/img/" ~ feature.icon|first.name) }});background-size:cover">{{ feature.text }}</a>
                 {% endfor %}
             </div>
-
         </div>
         <h4 class="tagline">{{ content|raw }}</h4>
-        {#{modular/footer.twig content blalalala#}
-        {#{{ content|raw }}#}
     </div>
 </section>
