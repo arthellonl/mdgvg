@@ -1,5 +1,4 @@
 <section id="header" style="background-image: url('{{ url('theme://assets/img/' ~ page.header.coverphoto|first.name) }}')">
-    <!-- <div class="nav-wrapper"> -->
         <a href="{{ home_url }}" id="logo"></a>
         <nav>
             <input type="checkbox" id="toggle-nav">
@@ -12,13 +11,7 @@
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
-    <!-- </div> -->
     <h2>
         {{ page.header.herotext|raw }}
-        <!--Fris.<br>
-        Helder.<br>
-        Positief.<br>
-        Genieten.<br>
-        Toegankelijk.-->
     </h2>
 </section>
