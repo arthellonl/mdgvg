@@ -2,8 +2,7 @@
 <html>
 	<head>
 	{% block head %}
-		<!-- robots noindex for DEV ONLY -->
-		<meta name="robots" content="noindex, nofollow">
+		<meta name="robots" content="index, follow">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta charset="utf-8" />
 		<title>{{ site.title }}</title>
@@ -45,48 +44,13 @@
 		{% block body %}
             {% block content %}{% endblock %}
         {% endblock %}
-
-
-		{#
-		{% block header %}
-			{% include 'modular/header.html.twig' %}
-		{% endblock %}
-
-
-		{% block overmij %}
-			{% include 'modular/overmij.html.twig' %}
-		{% endblock %}
-
-		{% block demos %}
-			{% include 'modular/demos.html.twig' %}
-		{% endblock %}
-		
-		{% block prijzen %}
-			{% include 'modular/prijzen.html.twig' %}
-		{% endblock %}
-
-		{% block reviews %}
-			{% include 'modular/reviews.html.twig' %}
-		{% endblock %}
-
-		{% block contact %}
-			{% include 'modular/contact.html.twig' %}
-		{% endblock %}
-		
-		{% block footer %}
-			{% include 'modular/footer.html.twig' %}
-		{% endblock %}
-		#}
 		
 		{% block bottom %}
 		<script>
 
 		</script>
 		
-
-	             <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script> -->
 		<script src="{{ url("theme://assets/js/player.js")|e }}"></script>
-		<!-- <script src="assets/js/jquery.paroller.min.js"></script> -->
 
 		<script>
 		    $(document).ready(function () {
@@ -118,32 +82,14 @@
 
 		    });
 
-		    /*
-			$("a[href=#contact]").click(function () {   
-				$('html').animate({scrollTop: $('#contact').offset().top -125 }, 1000, "swing");
-			});
-			*/
-
 			//nav animated scrollto anchor
 			$("a[href*=#]").click(function(e) {
 			    e.preventDefault();
 			    var aid = $(this).attr("href");
-			    /*var anchoroffset = $(125);*/
-			    /*if( aid = "#contact" ) {
-    				var anchoroffset = -125;
-				};*/
-			    /*if( aid = "#contact" ) {
-    				var anchoroffset = -125
-				} elseif ( aid = "#prijzen" ) {
-					var anchoroffset = -125
-				} else {
-					var anchoroffset = 0
-				}*/
 			    $('html,body').animate({scrollTop: $(aid).offset().top - 100 },'slow');
 			});
 		</script>
 
-		
 		{{ assets.js('bottom')|raw }}
 		{% endblock bottom %}
 	</body>

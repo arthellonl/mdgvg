@@ -2,57 +2,43 @@
     <h3>Demo's</h3>
     <h4>Dit is mijn stem</h4>
     <div class="row">
-    <div class="col12">
-    {% for feature in page.header.features %}
-    {#{% if (feature.items|length > 2) or (feature.items|length < 3 and loop.index is even) %}#}
-    <div class="demorow">
-    {#{% endif %}#}
-        <!--<div class="col12">-->
-            <!--<img src="{{ url("theme://assets/img/" ~ feature.icon|first.name) }}" />-->
-            <!--<h5>{{ feature.title }}</h5>-->
-            <!--<div class="row">-->
-            {% if feature.mediatype == 'audio' %}
-                {% for item in feature.items %}
-                <div class="{% if feature.items|length == 1 %}col12{% elseif feature.items|length == 2%}col6{% elseif feature.items|length == 3 %}col4{% endif %}">
-                    <div class="row">
+        <div class="col12">
+        {% for feature in page.header.features %}
+            <div class="demorow">
+                {% if feature.mediatype == 'audio' %}
+                    {% for item in feature.items %}
+                    <div class="{% if feature.items|length == 1 %}col12{% elseif feature.items|length == 2%}col6{% elseif feature.items|length == 3 %}col4{% endif %}">
+                        <div class="row">
 
-                        <div class="mediPlayer {% if feature.items|length == 1 %}col4{% elseif feature.items|length == 2%}col4{% elseif feature.items|length == 3 %}col4{% endif %}">
-                        {% if loop.first %}<span class="geluidaan"></span>{% endif %}
-                            
-                            <audio class="listen" preload="none" src="{{ url("theme://assets/media/" ~ item.media|first.name) }}"></audio>
-                        </div>
-                        <div class="demo-description {% if feature.items|length == 1 %}col8{% elseif feature.items|length == 2%}col8{% elseif feature.items|length == 3 %}col8{% endif %}">
-                            <h5>{{ item.title }}</h5>
-                            <p>{{ item.description }}</p>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            {% elseif feature.mediatype == 'video' %}
-                {% for item in feature.items %}
-                <div class="{% if feature.items|length == 1 %}col12{% elseif feature.items|length == 2%}col6{% elseif feature.items|length == 3 %}col4{% endif %}">
-                    <div class="row">
-                        <div class="videoplayer {% if feature.items|length == 1 %}col6{% elseif feature.items|length == 2%}col12{% elseif feature.items|length == 3 %}col12{% endif %}">
-                            <video src="{{ url("theme://assets/video/test.mp4")|e }}" width="100%" height="auto" controls></video>
-                        </div>
-                        <div class="demo-description {% if feature.items|length == 1 %}col6{% elseif feature.items|length == 2%}col12{% elseif feature.items|length == 3 %}col12{% endif %}">
-                            <h5>{{ item.title }}</h5>
-                            <p>{{ item.description }}</p>
+                            <div class="mediPlayer {% if feature.items|length == 1 %}col4{% elseif feature.items|length == 2%}col4{% elseif feature.items|length == 3 %}col4{% endif %}">
+                            {% if loop.first %}<span class="geluidaan"></span>{% endif %}
+                                
+                                <audio class="listen" preload="none" src="{{ url("theme://assets/media/" ~ item.media|first.name) }}"></audio>
+                            </div>
+                            <div class="demo-description {% if feature.items|length == 1 %}col8{% elseif feature.items|length == 2%}col8{% elseif feature.items|length == 3 %}col8{% endif %}">
+                                <h5>{{ item.title }}</h5>
+                                <p>{{ item.description }}</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                {% endfor %}
-            {% endif %}
-            <!--</div>-->
-        <!--</div>-->
-    {#{% if (feature.items|length > 2) or (feature.items|length < 3 and loop.index is odd) %}#}
+                    {% endfor %}
+                {% elseif feature.mediatype == 'video' %}
+                    {% for item in feature.items %}
+                    <div class="{% if feature.items|length == 1 %}col12{% elseif feature.items|length == 2%}col6{% elseif feature.items|length == 3 %}col4{% endif %}">
+                        <div class="row">
+                            <div class="videoplayer {% if feature.items|length == 1 %}col6{% elseif feature.items|length == 2%}col12{% elseif feature.items|length == 3 %}col12{% endif %}">
+                                <video src="{{ url("theme://assets/video/test.mp4")|e }}" width="100%" height="auto" controls></video>
+                            </div>
+                            <div class="demo-description {% if feature.items|length == 1 %}col6{% elseif feature.items|length == 2%}col12{% elseif feature.items|length == 3 %}col12{% endif %}">
+                                <h5>{{ item.title }}</h5>
+                                <p>{{ item.description }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}   
+            </div>
+        {% endfor %}
+        </div>
     </div>
-    {#{% endif %}#}
-    <!--<hr />-->
-    {% endfor %}
-</div>
-</div>
-
-
-        
 </section>

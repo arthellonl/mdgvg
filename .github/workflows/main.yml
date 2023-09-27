@@ -1,9 +1,28 @@
-name: SSH deployment from repo to live site
-on: push                 
+name: SSH deployment from repo to staging site
+on: push
 jobs:
-  web-deploy:
-    name: Deploy
+  staging-deploy:
+    name: Deploy to staging
     runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/staging'
+    steps:
+    - name: Get latest code
+      uses: actions/checkout@v3
+    - name: Deploy to server
+      uses: easingthemes/ssh-deploy@main
+      env:
+          SSH_PRIVATE_KEY: ${{ secrets.DEPLOY_PRIVATE_KEY }}
+          ARGS: "-rlgoDzvc -i"
+          SOURCE: "/"
+          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
+          REMOTE_USER: ${{ secrets.FTP_USERNAME }}
+          REMOTE_PORT: '7685'
+          TARGET: ${{ secrets.REMOTE_TARGET_STAGING }}
+          EXCLUDE: ""
+  live-deploy:
+    name: Deploy to live
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/master'
     steps:
     - name: Get latest code
       uses: actions/checkout@v3
@@ -17,6 +36,6 @@ jobs:
           REMOTE_USER: ${{ secrets.FTP_USERNAME }}
           REMOTE_PORT: '7685'
           TARGET: ${{ secrets.REMOTE_TARGET }}
-          EXCLUDE: ".github"
+          EXCLUDE: ""
 
 
