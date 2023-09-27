@@ -26,6 +26,6 @@ user/pages/01.home
 user/config/site.yaml
 ## different for staging and production, manual ftp upload:
 robots.txt
-## github workflow file
-.github/workflows/*
+## github workflow file:
+.github
 
