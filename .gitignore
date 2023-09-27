@@ -1,0 +1,29 @@
+# Grav Specific
+.sass-cache
+composer.lock
+cache/*
+assets/*
+logs/*
+images/*
+user/data/*
+
+# OS Generated
+.DS_Store*
+ehthumbs.db
+Icon?
+Thumbs.db
+*.swp
+user/themes/quark/
+
+# mdgvg specific
+## user uploaded media eg audio video:
+user/themes/mdgvg-theme/assets/media
+## user uploaded images eg avatars:
+user/themes/mdgvg-theme/assets/img
+## page contents:
+user/pages/01.home
+## user defined site metadata eg keywords:
+user/config/site.yaml
+## different for staging and production, manual ftp upload:
+robots.txt
+
