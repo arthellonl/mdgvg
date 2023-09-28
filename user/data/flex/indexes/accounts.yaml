@@ -1,0 +1,14 @@
+version: '1.2'
+timestamp: 1695894065
+count: 2
+index:
+  admin:
+    storage_key: admin
+    storage_timestamp: 1695801857
+    key: admin
+    email: mdgvg@arthello.com
+  manon:
+    storage_key: manon
+    storage_timestamp: 1695801857
+    key: manon
+    email: manonvangelder@gmail.com
