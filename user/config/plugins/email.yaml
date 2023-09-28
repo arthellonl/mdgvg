@@ -14,8 +14,8 @@ mailer:
     server: mail.zxcs.nl
     port: 465
     encryption: ssl
-    user: info@manondegrootvangelder.nl
-    password: '284RAiPpVEza#uyS'
+    user: smtp@manondegrootvangelder.nl
+    password: 'C29S9YExk2KVF#i*a8rR9!MbPP'
     auth_mode: plain
   sendmail:
     bin: /usr/sbin/sendmail
