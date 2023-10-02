@@ -15,12 +15,21 @@ user/themes/quark/
 # mdgvg specific
 ## user uploaded media eg audio video:
 user/themes/mdgvg-theme/assets/media
+
 ## user uploaded images eg avatars:
 user/themes/mdgvg-theme/assets/img
+
 ## page contents:
-user/pages/01.home
+user/pages/01.home/01._header
+user/pages/01.home/02._overmij
+user/pages/01.home/03._demos
+user/pages/01.home/04._prijzen
+user/pages/01.home/05._reviews
+user/pages/01.home/07._footer
+
 ## user defined site metadata eg keywords:
 user/config/site.yaml
-## different for staging and production, manual ftp upload:
-robots.txt
+
+## user accounts, manual ftp upload:
+user/accounts
 
