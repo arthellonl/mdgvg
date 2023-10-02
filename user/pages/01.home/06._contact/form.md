@@ -31,7 +31,8 @@ form:
           type: textarea
           validate:
             required: true
-      counterspam:
+      
+      alleenechtemensen:
         type: honeypot
 
    buttons:
