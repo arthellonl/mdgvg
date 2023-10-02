@@ -11,6 +11,7 @@ Workflow for deployment to production server:
 3. Push to staging branch
 4. Switch to master branch
 5. Merge staging branch into master branch
+6. Switch back to staging branch, repeat from step 2
 
 * On push to staging branch, Github Action starts to upload files to staging site.
 * On merge from staging branch into master branch, Github Action starts to upload files to production site.
