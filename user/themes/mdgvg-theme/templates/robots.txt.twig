@@ -1,9 +1,0 @@
-{% if config.site.environment == 'staging' %}
-{% for rule in page.header.staging %}
-{{ rule }}
-{% endfor %}
-
-{% else %}
-{{ page.content|raw }}
-
-{% endif %}
