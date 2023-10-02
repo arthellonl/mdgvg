@@ -30,9 +30,6 @@ user/pages/01.home/07._footer
 ## user defined site metadata eg keywords:
 user/config/site.yaml
 
-## user accounts:
+## user accounts, manual ftp upload:
 user/accounts
-
-## different for staging and production, manual ftp upload:
-robots.txt
 
